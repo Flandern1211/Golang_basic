@@ -19,9 +19,8 @@ func main(){
 	// defer语句：延迟执行函数调用，确保文件在使用后关闭
 	// 此处使用匿名函数包装file.Close()，以便处理关闭文件时可能出现的错误
 	defer func(){
-		err :=file.Close()
-		if err !=nil {
-			fmt.Println("err of close",err)
+		if err :=file.Close(); err !=nil{
+			fmt.Printf("file close err:%v\n",err)
 		}
 	}()
 
@@ -33,8 +32,8 @@ func main(){
 			if err == io.EOF && str != ""{
 				// 处理最后一行没有换行符的情况
 				fmt.Print(str)
+				break
 			}
-			break
 		}
 		fmt.Print(str) // 使用Print而非Println，避免重复添加换行符
 	}

@@ -1,7 +1,8 @@
 package model
 
-import "fmt"
-
+import ("fmt"
+	"strings"
+)
 type Customer struct{
 	Id uint64
 	Name string

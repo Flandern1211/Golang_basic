@@ -6,13 +6,17 @@
 //计算得出结果，直接代替被计算数的位置，并将其后一位直接在切片中删除（通过切片拼接），符号切片同样
 //确保没有乘除号时再对加减进行操作，加减进行操作时可以不用删除，可以在计算的时候将后一位置为0，对加减没有影响了就
 
-
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+)
 
 func main(){
 	//获取用户输入
+
+	
 	var res string
 	var nums []int
 	var fuhao []string
